@@ -2,26 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Muted yellow/dark theme tokens */
-:root {
-  --nb-bg: #0c0c0a;
-  --nb-text: #f6f3e8;
-  --nb-border: #262521;
-  --nb-card: rgba(255,255,255,.035);
-  --nb-accent: #e9b949;
-  --nb-accent-600: #d4a514;
-  --nb-muted: #9aa0a6;
-  --nb-soft: #c9c9bd;
-}
+:root { --bg: #0b1020; --text: #dfe7ff; --card: #121936; }
 
-html, body { background: var(--nb-bg); color: var(--nb-text); }
+html, body, :root { height: 100%; background: var(--bg); color: var(--text); }
 
-.nb-card { @apply border rounded-2xl p-6; border-color: var(--nb-border); background: var(--nb-card); }
-.nb-badge { @apply text-xs px-2 py-1 rounded-lg border; border-color: var(--nb-border); background: var(--nb-card); color: var(--nb-soft); }
-.nb-btn { @apply rounded-xl font-semibold px-5 py-3; }
-.nb-btn--accent { background: var(--nb-accent); color: #111; }
-.nb-btn--accent:hover { background: var(--nb-accent-600); }
-.nb-text-muted { color: var(--nb-muted); }
-.nb-text-soft { color: var(--nb-soft); }
-.header-blur { background: rgba(0,0,0,0.3); backdrop-filter: saturate(120%) blur(8px); border-bottom: 1px solid var(--nb-border); }
-.topbar { background: var(--nb-accent); color: #111; }
+.container { @apply max-w-6xl mx-auto px-4; }
