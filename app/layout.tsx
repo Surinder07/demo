@@ -1,18 +1,21 @@
-export const viewport = {
-  themeColor: "#0ea5e9",
-};
-
-export const metadata = {
-  title: "NextBoolean — Job-Ready EdTech",
-  description: "Live cohorts, recordings, hands-on labs and 95% placements.",
-};
-
 import "./globals.css";
+import type { Metadata, Viewport } from "next";
+
+export const metadata: Metadata = {
+  title: "NextBoolean — Training & Placements",
+  description:
+    "NextBoolean provides job-ready training in Java Full Stack, React, AWS/GCP, Salesforce, ServiceNow and more with 95% placement support."
+};
+
+export const viewport: Viewport = {
+  themeColor: "#e9b949",
+  colorScheme: "dark"
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen nb-bg nb-text antialiased">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Keep default SSR for Vercel. No 'output: export' here.
+  reactStrictMode: false
 };
 module.exports = nextConfig;

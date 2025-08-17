@@ -1,18 +1,19 @@
-# NextBoolean — EdTech Landing (Next.js 14 + Tailwind)
+# NextBoolean
 
-Theme tuned to your logo (cyan → fuchsia → violet).
+Muted yellow/dark theme Next.js (App Router) site for an ed‑tech brand with training + placements.
 
-## Run locally
-```bash
-npm install
-npm run dev
-# http://localhost:3000
-```
+## Features
+- Home lists courses
+- Dynamic course pages at `/courses/[slug]`
+- TailwindCSS styling
+- App Router (Next 14)
 
-## Deploy (Vercel)
-- Import this repo into Vercel (Framework: Next.js, Root: `/`).
-- No env vars required.
+## Scripts
+- `npm run dev` – dev server with hot reload (http://localhost:3000)
+- `npm run build` – production build
+- `npm start` – run the production build
 
-## Notes
-- Single-page app in `app/page.tsx`.
-- Tailwind preconfigured. Edit colors in `app/globals.css`.
+## Deploy on Vercel
+Import the repo. Add your custom domain if needed.
+- A record `@` → 76.76.21.21
+- CNAME `www` → cname.vercel-dns.com
