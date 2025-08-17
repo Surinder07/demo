@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Brand theme (blue family like earlier look) */
 :root {
   --nb-bg: #0a0f1a;
   --nb-text: #e6edf6;
