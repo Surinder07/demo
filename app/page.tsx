@@ -1,25 +1,27 @@
 export default function Page() {
   return (
     <>
+      {/* Top bar */}
       <div className="brand-gradient text-white text-sm">
         <div className="mx-auto max-w-6xl px-4 py-2 text-center">
           🎉 Admissions Open • 6–12 Week Cohorts • Live + Recordings • 95% Placements
         </div>
       </div>
 
+      {/* Header */}
       <header className="sticky top-0 z-40 bg-black/20 backdrop-blur border-b border-white/10">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-8 w-8 rounded-full brand-gradient shadow-nb" />
+            <div className="h-8 w-8 rounded-full brand-gradient shadow-[0_0_18px_rgba(56,189,248,.35)]" />
             <span className="font-extrabold tracking-tight text-lg">
               <span className="text-white">Next</span> <span className="text-gradient">Boolean</span>
             </span>
           </div>
-          <nav className="hidden md:flex items-center gap-6 text-sm text-slate-400">
+          <nav className="hidden md:flex items-center gap-6 text-sm text-slate-300">
             <a href="#courses" className="hover:text-white">Courses</a>
             <a href="#features" className="hover:text-white">Features</a>
             <a href="#placements" className="hover:text-white">Placements</a>
-            <a href="#contact" className="px-4 py-2 rounded-xl brand-gradient text-white font-semibold shadow-nb">Enroll</a>
+            <a href="#contact" className="px-4 py-2 rounded-xl brand-gradient text-white font-semibold">Enroll</a>
           </nav>
         </div>
       </header>
@@ -33,13 +35,13 @@ export default function Page() {
               Limited seats — apply now
             </span>
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-              Become <span className="text-gradient">Job‑Ready</span> with NextBoolean
+              Become <span className="text-gradient">Job-Ready</span> with NextBoolean
             </h1>
             <p className="text-slate-400 text-lg max-w-2xl">
-              Instructor‑led cohorts with live sessions, recordings, coding labs and placement support.
+              Instructor-led cohorts with live sessions, recordings, coding labs and placement support.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href="#courses" className="rounded-xl px-5 py-3 font-semibold brand-gradient text-white shadow-nb">Explore Courses</a>
+              <a href="#courses" className="rounded-xl px-5 py-3 font-semibold brand-gradient text-white shadow-[0_0_18px_rgba(56,189,248,.35)]">Explore Courses</a>
               <a href="#contact" className="rounded-xl px-5 py-3 font-semibold border border-white/10 hover:border-white/30">Free Demo</a>
             </div>
             <div className="flex items-center gap-8 pt-4 text-sm">
@@ -53,8 +55,8 @@ export default function Page() {
               <div className="aspect-[4/3] w-full rounded-xl brand-gradient grid place-items-center">
                 <div className="text-center text-white/90">
                   <svg className="mx-auto mb-3" width="64" height="64" viewBox="0 0 24 24" fill="none">
-                    <rect x="3" y="3" width="18" height="12" rx="2" stroke="white" strokeOpacity=".9" strokeWidth="1.2"/>
-                    <path d="M3 17h18v2H3z" fill="white" fillOpacity=".85"/>
+                    <rect x="3" y="3" width="18" height="12" rx="2" stroke="white" strokeOpacity=".9" strokeWidth="1.2" />
+                    <path d="M3 17h18v2H3z" fill="white" fillOpacity=".85" />
                     <circle cx="8" cy="9" r="1" fill="white" />
                     <rect x="10" y="8" width="8" height="2" fill="white" />
                     <rect x="6" y="12" width="12" height="2" fill="white" />
@@ -71,12 +73,12 @@ export default function Page() {
       <section id="courses" className="px-4 py-16">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-2">Popular Courses</h2>
-          <p className="text-slate-400 mb-8">6 weeks to 3 months • Online & In‑person • Placement support</p>
+          <p className="text-slate-400 mb-8">6 weeks to 3 months • Online & In-person • Placement support</p>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {["Java Full Stack","React Web Development","AWS Cloud","GCP Cloud","Business Analyst","Salesforce Developer","ServiceNow Developer"].map((t,i)=> (
-              <article key={i} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur hover:shadow-[0_0_18px_rgba(139,92,246,.35)] transition">
+            {["Java Full Stack", "React Web Dev", "AWS Cloud", "GCP Cloud", "Business Analyst", "Salesforce Dev", "ServiceNow Dev"].map((t, i) => (
+              <article key={i} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur hover:shadow-[0_0_18px_rgba(37,99,235,.35)] transition">
                 <h3 className="text-white font-semibold text-lg mb-1">{t}</h3>
-                <p className="text-slate-400 text-sm">Hands‑on projects, mock interviews, resume help and capstone.</p>
+                <p className="text-slate-400 text-sm">Hands-on projects, mock interviews, resume help and capstone.</p>
                 <div className="mt-4 flex gap-3">
                   <a href="#contact" className="rounded-xl px-4 py-2 text-sm brand-gradient text-white">Enroll</a>
                   <a href="#contact" className="rounded-xl px-4 py-2 text-sm border border-white/10">Syllabus</a>
@@ -91,13 +93,13 @@ export default function Page() {
       <section id="features" className="px-4 py-16 border-y border-white/10">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-2">Learning That Gets You Hired</h2>
-          <p className="text-slate-400 mb-8">Live sessions, recordings, hands‑on labs, and placement prep.</p>
+          <p className="text-slate-400 mb-8">Live sessions, recordings, hands-on labs, and placement prep.</p>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {[{i:"🎥",t:"Live Sessions"},{i:"📼",t:"Recordings"},{i:"🧪",t:"Hands‑on Labs"},{i:"🧭",t:"Mock Interviews"}].map((f,idx)=> (
+            {[{ i: "🎥", t: "Live Sessions" }, { i: "📼", t: "Recordings" }, { i: "🧪", t: "Hands-on Labs" }, { i: "🧭", t: "Mock Interviews" }].map((f, idx) => (
               <article key={idx} className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
                 <div className="text-3xl mb-2">{f.i}</div>
                 <h3 className="font-semibold text-white">{f.t}</h3>
-                <p className="text-slate-400 text-sm mt-1">Everything you need to be job‑ready.</p>
+                <p className="text-slate-400 text-sm mt-1">Everything you need to be job-ready.</p>
               </article>
             ))}
           </div>
@@ -113,7 +115,7 @@ export default function Page() {
             <ul className="mt-4 space-y-2 text-slate-400 text-sm list-disc list-inside">
               <li>1:1 mentorship • Resume workshops</li>
               <li>DSA & System Design practice</li>
-              <li>On‑campus & virtual drives</li>
+              <li>On-campus & virtual drives</li>
             </ul>
           </div>
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
@@ -135,10 +137,10 @@ export default function Page() {
           </div>
           <form className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <div className="grid gap-4">
-              <input placeholder="Name" className="w-full rounded-xl bg-black/30 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-fuchsia-500" />
-              <input type="email" placeholder="Email" className="w-full rounded-xl bg-black/30 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-fuchsia-500" />
+              <input placeholder="Name" className="w-full rounded-xl bg-black/30 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500" />
+              <input type="email" placeholder="Email" className="w-full rounded-xl bg-black/30 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500" />
               <div className="grid grid-cols-2 gap-4">
-                <select className="w-full rounded-xl bg-black/30 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-fuchsia-500">
+                <select className="w-full rounded-xl bg-black/30 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500">
                   <option>Java Full Stack</option>
                   <option>React Web Development</option>
                   <option>AWS Cloud</option>
@@ -147,12 +149,12 @@ export default function Page() {
                   <option>Salesforce Developer</option>
                   <option>ServiceNow Developer</option>
                 </select>
-                <select className="w-full rounded-xl bg-black/30 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-fuchsia-500">
+                <select className="w-full rounded-xl bg-black/30 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500">
                   <option>Online</option>
-                  <option>In‑person</option>
+                  <option>In-person</option>
                 </select>
               </div>
-              <textarea rows={4} placeholder="Tell us about your goals" className="w-full rounded-xl bg-black/30 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-fuchsia-500" />
+              <textarea rows={4} placeholder="Tell us about your goals" className="w-full rounded-xl bg-black/30 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500" />
               <button type="button" className="rounded-xl px-5 py-3 font-semibold brand-gradient text-white">Request a Call</button>
             </div>
           </form>

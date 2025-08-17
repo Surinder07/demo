@@ -2,30 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Theme helpers */
+/* Brand theme (blue family like earlier look) */
 :root {
-  --nb-bg: #0b0d12;
+  --nb-bg: #0a0f1a;
   --nb-text: #e6edf6;
   --nb-cyan: #38bdf8;
-  --nb-fuchsia: #d946ef;
-  --nb-violet: #8b5cf6;
+  --nb-blue: #0ea5e9;
+  --nb-deep: #2563eb;
 }
 
-body {
-  background:
-    radial-gradient(1200px 600px at -10% -10%, color-mix(in srgb, var(--nb-cyan) 22%, transparent), transparent 60%),
-    radial-gradient(1100px 500px at 110% 10%, color-mix(in srgb, var(--nb-fuchsia) 20%, transparent), transparent 60%),
+.nb-bg {
+  background: radial-gradient(
+      1200px 600px at -10% -10%,
+      color-mix(in srgb, var(--nb-cyan) 20%, transparent),
+      transparent 60%
+    ),
+    radial-gradient(
+      1100px 500px at 110% 10%,
+      color-mix(in srgb, var(--nb-blue) 18%, transparent),
+      transparent 60%
+    ),
     var(--nb-bg);
+}
+.nb-text {
   color: var(--nb-text);
 }
-
 .text-gradient {
-  background-image: linear-gradient(90deg, var(--nb-cyan), var(--nb-fuchsia), var(--nb-violet));
+  background-image: linear-gradient(
+    90deg,
+    var(--nb-cyan),
+    var(--nb-blue),
+    var(--nb-deep)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
-
 .brand-gradient {
-  background-image: linear-gradient(90deg, var(--nb-cyan) 0%, var(--nb-fuchsia) 50%, var(--nb-violet) 100%);
+  background-image: linear-gradient(
+    90deg,
+    var(--nb-cyan) 0%,
+    var(--nb-blue) 50%,
+    var(--nb-deep) 100%
+  );
 }
