@@ -28,8 +28,8 @@ export default function Page() {
             <span className="font-semibold">Nextboolean</span>
           </div>
           <nav className="hidden md:flex gap-4 text-sm">
-            {['Home','Courses','Placements','Admissions','Pricing','FAQ','Demos','Contact'].map(x=>
-              <a key={x} href={'#'+x.toLowerCase()} className="hover:text-indigo-300">{x}</a>
+            {['Home', 'Courses', 'Placements', 'Admissions', 'Pricing', 'FAQ', 'Demos', 'Contact'].map(x =>
+              <a key={x} href={'#' + x.toLowerCase()} className="hover:text-indigo-300">{x}</a>
             )}
           </nav>
           <a href="#admissions" className="ml-4 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-sm">Enroll Now</a>
@@ -91,7 +91,7 @@ export default function Page() {
       <section id="placements" className="max-w-6xl mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold mb-6">Placements</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          {[["95%","Placement Rate"],["60d","Median Time to Offer"],["120+","Hiring Partners"]].map(([k,v]) => (
+          {[["95%", "Placement Rate"], ["60d", "Median Time to Offer"], ["120+", "Hiring Partners"]].map(([k, v]) => (
             <div key={k} className="bg-[#121936] rounded-2xl shadow-lg p-6 border border-indigo-700/30 text-center">
               <div className="text-4xl font-extrabold text-indigo-400">{k}</div>
               <div className="opacity-80">{v}</div>
@@ -121,7 +121,7 @@ export default function Page() {
       <section id="faq" className="max-w-6xl mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold mb-6">FAQ</h2>
         <div className="space-y-3">
-          {[["Are classes recorded?","Yes, every live class is recorded and shared the same day."],["Do you offer job assistance?","Yes — resume reviews, mock interviews, and referrals."],["Do you provide certificates?","Yes, a certificate is issued on course completion."]].map(([q,a]) => (
+          {[["Are classes recorded?", "Yes, every live class is recorded and shared the same day."], ["Do you offer job assistance?", "Yes — resume reviews, mock interviews, and referrals."], ["Do you provide certificates?", "Yes, a certificate is issued on course completion."]].map(([q, a]) => (
             <details key={q} className="bg-[#121936] rounded-2xl shadow-lg p-6 border border-indigo-700/30">
               <summary className="cursor-pointer font-semibold">{q}</summary>
               <p className="mt-2 opacity-90">{a}</p>
@@ -145,7 +145,7 @@ export default function Page() {
       <section id="demos" className="max-w-6xl mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold mb-6">Demos</h2>
         <div className="grid md:grid-cols-2 gap-6">
-          {["Java Full Stack Intro","React Basics"].map(title => (
+          {["Java Full Stack Intro", "React Basics"].map(title => (
             <div key={title} className="bg-[#121936] rounded-2xl shadow-lg p-6 border border-indigo-700/30">
               <h3 className="text-xl font-semibold">{title}</h3>
               <div className="aspect-video w-full rounded-xl bg-black/30 grid place-items-center text-sm opacity-70 mt-2">Video placeholder</div>
@@ -196,8 +196,8 @@ export default function Page() {
           </div>
           <div>
             <h4 className="font-semibold mb-2">Get in touch</h4>
-            <p className="opacity-90">Brampton, ON • +1 (555) 123-4567</p>
-            <p className="opacity-90">hello@nextboolean.com</p>
+            <p className="opacity-90">Mississauga, ON • +1 437-463-8537</p>
+            <p className="opacity-90">info@nextboolean.com</p>
           </div>
         </div>
         <div className="max-w-6xl mx-auto px-4 mt-6 opacity-70 text-xs">© {new Date().getFullYear()} Nextboolean. All rights reserved.</div>
