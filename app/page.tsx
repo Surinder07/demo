@@ -13,9 +13,9 @@ export default function Page() {
   ];
 
   const tiers = [
-    { name: "Starter", price: "CA$699", features: ["Any 1 course", "Live + recordings", "Community support"] },
-    { name: "Pro", price: "CA$1,199", features: ["Any 2 courses", "1:1 mentor sessions", "Interview prep pack"] },
-    { name: "Career+", price: "CA$1,799", features: ["6-month access", "Capstone reviews", "Placement assistance"] },
+    { name: "Starter", price: "CA$1699", features: ["Any 1 course", "Live + recordings", "Community support"] },
+    { name: "Pro", price: "CA$2,199", features: ["Any 2 courses", "1:1 mentor sessions", "Interview prep pack"] },
+    { name: "Career+", price: "CA$2,799", features: ["6-month access", "Capstone reviews", "Placement assistance"] },
   ];
 
   return (
