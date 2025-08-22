@@ -1,0 +1,444 @@
+{
+  "courses": {
+    "java-fullstack": {
+      "id": "java-fullstack",
+      "title": "Java Full Stack Development",
+      "description": "Comprehensive 12-week program covering Java fundamentals to advanced full-stack development",
+      "icon": "☕",
+      "duration": "12 weeks",
+      "schedule": {
+        "weekday": {
+          "days": ["Monday", "Wednesday", "Friday"],
+          "time": "7:00 PM - 9:00 PM EST",
+          "type": "Theory & Hands-on Practice"
+        },
+        "weekend": {
+          "days": ["Sunday"],
+          "time": "10:00 AM - 3:00 PM EST",
+          "type": "Intensive Project Work & Q&A"
+        }
+      },
+      "zoomLinks": {
+        "weekday": {
+          "url": "https://zoom.us/j/1234567890",
+          "meetingId": "123 456 7890",
+          "passcode": "JavaWeekday2024"
+        },
+        "weekend": {
+          "url": "https://zoom.us/j/0987654321",
+          "meetingId": "098 765 4321",
+          "passcode": "JavaWeekend2024"
+        }
+      },
+      "modules": [
+        {
+          "id": "module-1",
+          "title": "Java Fundamentals",
+          "weeks": [1, 2],
+          "topics": [
+            {
+              "id": "topic-1-1",
+              "title": "Java History & JVM Architecture",
+              "description": "Understanding Java's evolution and how JVM works",
+              "duration": "2 hours",
+              "materials": [
+                {
+                  "type": "pdf",
+                  "title": "Java Fundamentals - Chapter 1",
+                  "filename": "java-fundamentals-ch1.pdf",
+                  "size": "2.3 MB",
+                  "downloadUrl": "/downloads/java-fundamentals-ch1.pdf",
+                  "description": "Complete guide to Java basics and JVM architecture"
+                },
+                {
+                  "type": "code",
+                  "title": "Sample Code Examples",
+                  "filename": "java-basics-examples.zip",
+                  "size": "1.1 MB",
+                  "downloadUrl": "/downloads/java-basics-examples.zip",
+                  "description": "Working code examples for all concepts"
+                }
+              ],
+              "assignments": [
+                {
+                  "title": "Install Java & IDE",
+                  "description": "Set up development environment",
+                  "dueDate": "Week 1, Day 2"
+                }
+              ]
+            },
+            {
+              "id": "topic-1-2",
+              "title": "Variables, Data Types & Operators",
+              "description": "Core Java syntax and data manipulation",
+              "duration": "3 hours",
+              "materials": [
+                {
+                  "type": "pdf",
+                  "title": "Data Types & Variables Guide",
+                  "filename": "java-data-types-guide.pdf",
+                  "size": "1.8 MB",
+                  "downloadUrl": "/downloads/java-data-types-guide.pdf",
+                  "description": "Comprehensive guide to Java data types"
+                },
+                {
+                  "type": "video",
+                  "title": "Variables Tutorial",
+                  "filename": "java-variables-tutorial.mp4",
+                  "size": "45.2 MB",
+                  "downloadUrl": "/downloads/java-variables-tutorial.mp4",
+                  "description": "Step-by-step video tutorial"
+                }
+              ],
+              "assignments": [
+                {
+                  "title": "Calculator Application",
+                  "description": "Build a simple calculator using variables and operators",
+                  "dueDate": "Week 1, Day 5"
+                }
+              ]
+            },
+            {
+              "id": "topic-1-3",
+              "title": "Control Structures",
+              "description": "If statements, loops, and program flow control",
+              "duration": "4 hours",
+              "materials": [
+                {
+                  "type": "pdf",
+                  "title": "Control Structures Reference",
+                  "filename": "java-control-structures.pdf",
+                  "size": "2.1 MB",
+                  "downloadUrl": "/downloads/java-control-structures.pdf",
+                  "description": "Complete reference for control structures"
+                },
+                {
+                  "type": "code",
+                  "title": "Control Flow Examples",
+                  "filename": "control-flow-examples.zip",
+                  "size": "0.8 MB",
+                  "downloadUrl": "/downloads/control-flow-examples.zip",
+                  "description": "Practical examples of all control structures"
+                }
+              ],
+              "assignments": [
+                {
+                  "title": "Number Guessing Game",
+                  "description": "Create a game using loops and conditionals",
+                  "dueDate": "Week 2, Day 3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "module-2",
+          "title": "Object-Oriented Programming",
+          "weeks": [3, 4],
+          "topics": [
+            {
+              "id": "topic-2-1",
+              "title": "Classes & Objects",
+              "description": "Understanding OOP fundamentals and class design",
+              "duration": "6 hours",
+              "materials": [
+                {
+                  "type": "pdf",
+                  "title": "OOP Fundamentals Guide",
+                  "filename": "java-oop-fundamentals.pdf",
+                  "size": "3.2 MB",
+                  "downloadUrl": "/downloads/java-oop-fundamentals.pdf",
+                  "description": "Complete OOP concepts and implementation"
+                },
+                {
+                  "type": "code",
+                  "title": "OOP Project Templates",
+                  "filename": "oop-project-templates.zip",
+                  "size": "2.5 MB",
+                  "downloadUrl": "/downloads/oop-project-templates.zip",
+                  "description": "Ready-to-use project templates"
+                }
+              ],
+              "assignments": [
+                {
+                  "title": "Student Management System",
+                  "description": "Design and implement a student class with methods",
+                  "dueDate": "Week 3, Day 5"
+                }
+              ]
+            },
+            {
+              "id": "topic-2-2",
+              "title": "Inheritance & Polymorphism",
+              "description": "Advanced OOP concepts and design patterns",
+              "duration": "5 hours",
+              "materials": [
+                {
+                  "type": "pdf",
+                  "title": "Inheritance & Polymorphism",
+                  "filename": "java-inheritance-polymorphism.pdf",
+                  "size": "2.8 MB",
+                  "downloadUrl": "/downloads/java-inheritance-polymorphism.pdf",
+                  "description": "Advanced OOP concepts explained"
+                },
+                {
+                  "type": "code",
+                  "title": "Inheritance Examples",
+                  "filename": "inheritance-examples.zip",
+                  "size": "1.9 MB",
+                  "downloadUrl": "/downloads/inheritance-examples.zip",
+                  "description": "Real-world inheritance examples"
+                }
+              ],
+              "assignments": [
+                {
+                  "title": "Vehicle Hierarchy System",
+                  "description": "Create a vehicle class hierarchy with inheritance",
+                  "dueDate": "Week 4, Day 3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "module-3",
+          "title": "Collections Framework",
+          "weeks": [5, 6],
+          "topics": [
+            {
+              "id": "topic-3-1",
+              "title": "List & Set Interfaces",
+              "description": "Working with ArrayList, LinkedList, HashSet, and TreeSet",
+              "duration": "4 hours",
+              "materials": [
+                {
+                  "type": "pdf",
+                  "title": "Collections Framework Guide",
+                  "filename": "java-collections-guide.pdf",
+                  "size": "2.7 MB",
+                  "downloadUrl": "/downloads/java-collections-guide.pdf",
+                  "description": "Complete collections framework reference"
+                },
+                {
+                  "type": "code",
+                  "title": "Collections Examples",
+                  "filename": "collections-examples.zip",
+                  "size": "1.6 MB",
+                  "downloadUrl": "/downloads/collections-examples.zip",
+                  "description": "Practical collections usage examples"
+                }
+              ],
+              "assignments": [
+                {
+                  "title": "Contact Management System",
+                  "description": "Build a contact manager using collections",
+                  "dueDate": "Week 5, Day 5"
+                }
+              ]
+            },
+            {
+              "id": "topic-3-2",
+              "title": "Map Interface & Iterators",
+              "description": "HashMap, TreeMap, and collection iteration",
+              "duration": "3 hours",
+              "materials": [
+                {
+                  "type": "pdf",
+                  "title": "Map & Iterator Guide",
+                  "filename": "java-map-iterator-guide.pdf",
+                  "size": "1.9 MB",
+                  "downloadUrl": "/downloads/java-map-iterator-guide.pdf",
+                  "description": "Map interface and iterator patterns"
+                }
+              ],
+              "assignments": [
+                {
+                  "title": "Inventory Management System",
+                  "description": "Create an inventory system using maps",
+                  "dueDate": "Week 6, Day 3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "module-4",
+          "title": "Exception Handling & I/O",
+          "weeks": [7, 8],
+          "topics": [
+            {
+              "id": "topic-4-1",
+              "title": "Exception Management",
+              "description": "Try-catch blocks, custom exceptions, and best practices",
+              "duration": "4 hours",
+              "materials": [
+                {
+                  "type": "pdf",
+                  "title": "Exception Handling Guide",
+                  "filename": "java-exception-handling.pdf",
+                  "size": "2.4 MB",
+                  "downloadUrl": "/downloads/java-exception-handling.pdf",
+                  "description": "Complete exception handling reference"
+                },
+                {
+                  "type": "code",
+                  "title": "Exception Examples",
+                  "filename": "exception-examples.zip",
+                  "size": "1.3 MB",
+                  "downloadUrl": "/downloads/exception-examples.zip",
+                  "description": "Exception handling patterns and examples"
+                }
+              ],
+              "assignments": [
+                {
+                  "title": "File Processing with Exceptions",
+                  "description": "Build a file processor with proper exception handling",
+                  "dueDate": "Week 7, Day 5"
+                }
+              ]
+            },
+            {
+              "id": "topic-4-2",
+              "title": "File I/O Operations",
+              "description": "Reading, writing, and managing files in Java",
+              "duration": "5 hours",
+              "materials": [
+                {
+                  "type": "pdf",
+                  "title": "File I/O Operations Guide",
+                  "filename": "java-file-io-guide.pdf",
+                  "size": "2.9 MB",
+                  "downloadUrl": "/downloads/java-file-io-guide.pdf",
+                  "description": "Complete file I/O reference"
+                }
+              ],
+              "assignments": [
+                {
+                  "title": "Log File Analyzer",
+                  "description": "Create a log file analyzer with I/O operations",
+                  "dueDate": "Week 8, Day 3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "module-5",
+          "title": "Multithreading & Concurrency",
+          "weeks": [9, 10],
+          "topics": [
+            {
+              "id": "topic-5-1",
+              "title": "Thread Creation & Management",
+              "description": "Creating threads, lifecycle, and basic synchronization",
+              "duration": "6 hours",
+              "materials": [
+                {
+                  "type": "pdf",
+                  "title": "Multithreading Guide",
+                  "filename": "java-multithreading-guide.pdf",
+                  "size": "3.5 MB",
+                  "downloadUrl": "/downloads/java-multithreading-guide.pdf",
+                  "description": "Complete multithreading reference"
+                },
+                {
+                  "type": "code",
+                  "title": "Threading Examples",
+                  "filename": "threading-examples.zip",
+                  "size": "2.8 MB",
+                  "downloadUrl": "/downloads/threading-examples.zip",
+                  "description": "Practical multithreading examples"
+                }
+              ],
+              "assignments": [
+                {
+                  "title": "Multi-threaded Calculator",
+                  "description": "Build a calculator that processes operations in parallel",
+                  "dueDate": "Week 9, Day 5"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "module-6",
+          "title": "Advanced Java Features",
+          "weeks": [11, 12],
+          "topics": [
+            {
+              "id": "topic-6-1",
+              "title": "Lambda Expressions & Streams",
+              "description": "Modern Java features and functional programming",
+              "duration": "5 hours",
+              "materials": [
+                {
+                  "type": "pdf",
+                  "title": "Modern Java Features Guide",
+                  "filename": "java-modern-features.pdf",
+                  "size": "2.6 MB",
+                  "downloadUrl": "/downloads/java-modern-features.pdf",
+                  "description": "Lambda expressions and streams guide"
+                }
+              ],
+              "assignments": [
+                {
+                  "title": "Data Processing Pipeline",
+                  "description": "Create a data processing system using streams",
+                  "dueDate": "Week 11, Day 5"
+                }
+              ]
+            },
+            {
+              "id": "topic-6-2",
+              "title": "Capstone Project",
+              "description": "Final comprehensive project integrating all concepts",
+              "duration": "10 hours",
+              "materials": [
+                {
+                  "type": "pdf",
+                  "title": "Capstone Project Guide",
+                  "filename": "java-capstone-guide.pdf",
+                  "size": "4.1 MB",
+                  "downloadUrl": "/downloads/java-capstone-guide.pdf",
+                  "description": "Complete capstone project requirements and guidelines"
+                },
+                {
+                  "type": "code",
+                  "title": "Project Templates",
+                  "filename": "capstone-templates.zip",
+                  "size": "5.2 MB",
+                  "downloadUrl": "/downloads/capstone-templates.zip",
+                  "description": "Project templates and starter code"
+                }
+              ],
+              "assignments": [
+                {
+                  "title": "E-commerce Platform",
+                  "description": "Build a complete e-commerce system",
+                  "dueDate": "Week 12, Day 5"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "totalTopics": 15,
+      "totalHours": 120,
+      "totalAssignments": 20,
+      "certificate": {
+        "available": true,
+        "requirements": "Complete all assignments and final project",
+        "type": "Professional Java Developer Certificate"
+      }
+    }
+  },
+  "downloads": {
+    "baseUrl": "/downloads/",
+    "categories": [
+      "pdf",
+      "code",
+      "video",
+      "presentation"
+    ]
+  }
+}

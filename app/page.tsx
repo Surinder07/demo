@@ -59,10 +59,34 @@ export default function Page() {
   ];
 
   const courses = [
-    { title: "Java Full Stack", meta: "12 weeks • Online/In-person", list: ["Spring Boot, JPA", "Microservices", "Docker & CI/CD", "Mock interviews"] },
-    { title: "React Web Dev", meta: "8 weeks • Online", list: ["Hooks & State", "Next.js", "Auth & APIs", "Deploy to Vercel"] },
-    { title: "AWS Solutions", meta: "8 weeks • Online", list: ["EC2, S3, IAM", "Fargate & ECS", "CI/CD", "Monitoring"] },
-    { title: "GCP Data Eng", meta: "10 weeks • Online", list: ["BigQuery, Dataflow", "Composer", "Cloud SQL", "ETL pipelines"] },
+    { 
+      title: "Java Full Stack", 
+      icon: "☕", 
+      description: "Master Java fundamentals, Spring Boot, and full-stack development", 
+      features: ["Spring Boot & JPA", "Microservices Architecture", "Docker & CI/CD", "Mock Interviews & Placement Support"],
+      price: "CA$1,699"
+    },
+    { 
+      title: "React Web Dev", 
+      icon: "⚛️", 
+      description: "Build modern web applications with React and Next.js", 
+      features: ["Hooks & State Management", "Next.js Framework", "Authentication & APIs", "Deploy to Vercel"],
+      price: "CA$1,299"
+    },
+    { 
+      title: "AWS Solutions", 
+      icon: "☁️", 
+      description: "Cloud infrastructure and DevOps with Amazon Web Services", 
+      features: ["EC2, S3, IAM", "Fargate & ECS", "CI/CD Pipelines", "Cloud Monitoring & Security"],
+      price: "CA$1,499"
+    },
+    { 
+      title: "GCP Data Eng", 
+      icon: "📊", 
+      description: "Data engineering and analytics on Google Cloud Platform", 
+      features: ["BigQuery & Dataflow", "Cloud Composer", "Cloud SQL", "ETL Pipelines & ML"],
+      price: "CA$1,799"
+    },
   ];
 
   const tiers = [
@@ -113,7 +137,8 @@ export default function Page() {
             <a href="#pricing" className="hover:text-cyan-300 transition-colors">Pricing</a>
             <a href="#team" className="hover:text-cyan-300 transition-colors">Team</a>
             <a href="#careers" className="hover:text-cyan-300 transition-colors">Careers</a>
-            <a href="/lms" className="hover:text-cyan-300 transition-colors">LMS Portal</a>
+            <a href="https://lms.nextboolean.com" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">LMS Portal</a>
+            <a href="/course-materials" className="hover:text-cyan-300 transition-colors">Course Materials</a>
           </nav>
           <button 
             onClick={() => setEnrollFormOpen(true)}
@@ -217,29 +242,454 @@ export default function Page() {
         ))}
       </section>
 
-      {/* Courses */}
-      <section id="courses" className="max-w-6xl mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold mb-6">Courses</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {courses.map(c => (
-            <div key={c.title} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-cyan-500/10">
-              <div className="flex items-center justify-between">
-                <h3 className="text-xl font-semibold">{c.title}</h3>
-                <span className="text-xs opacity-70">{c.meta}</span>
-              </div>
-              <ul className="mt-3 space-y-1 list-disc list-inside opacity-95">
-                {c.list.map(i => <li key={i}>{i}</li>)}
+      {/* Courses Section */}
+      <section id="courses" className="max-w-6xl mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white mb-4">Our Courses</h2>
+          <p className="text-xl text-gray-300">Comprehensive bootcamps designed for real-world success</p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {courses.map((course, index) => (
+            <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-cyan-500/10">
+              <div className="text-4xl mb-4">{course.icon}</div>
+              <h3 className="text-xl font-semibold text-white mb-3">{course.title}</h3>
+              <p className="text-gray-300 mb-4">{course.description}</p>
+              <ul className="text-sm text-gray-400 space-y-2 mb-6">
+                {course.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-center gap-2">
+                    <span className="text-cyan-400">✓</span>
+                    {feature}
+                  </li>
+                ))}
               </ul>
-              <div className="mt-4 flex gap-2">
-                <a href="#admissions" className="px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 text-white text-sm font-medium transition-all duration-200">Enroll</a>
-                <a href="#demos" className="px-4 py-2 rounded-xl border border-cyan-500/30 hover:bg-cyan-500/10 text-cyan-300 text-sm transition-all duration-200">Demo</a>
+              <div className="flex items-center justify-between">
+                <span className="text-2xl font-bold text-white">{course.price}</span>
+                <button className="px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 text-white text-sm font-medium transition-all duration-200">
+                  Learn More
+                </button>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Placements */}
+      {/* Core Java Course Content Section */}
+      <section className="max-w-6xl mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white mb-4">Core Java Course Content</h2>
+          <p className="text-xl text-gray-300">Comprehensive curriculum covering Java fundamentals to advanced concepts</p>
+        </div>
+        
+        <div className="grid gap-6">
+          {/* Week 1-2: Java Fundamentals */}
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-2xl">☕</span>
+              <h3 className="text-2xl font-semibold text-white">Week 1-2: Java Fundamentals</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="text-lg font-semibold text-cyan-300 mb-3">Core Concepts</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Java History & JVM Architecture</li>
+                  <li>• Variables, Data Types & Operators</li>
+                  <li>• Control Structures (if, switch, loops)</li>
+                  <li>• Arrays & String Manipulation</li>
+                  <li>• Methods & Method Overloading</li>
+                  <li>• Object-Oriented Programming Basics</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-cyan-300 mb-3">Hands-on Projects</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Calculator Application</li>
+                  <li>• Number Guessing Game</li>
+                  <li>• Student Grade Calculator</li>
+                  <li>• Simple Banking System</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Week 3-4: Object-Oriented Programming */}
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-2xl">🏗️</span>
+              <h3 className="text-2xl font-semibold text-white">Week 3-4: Object-Oriented Programming</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="text-lg font-semibold text-cyan-300 mb-3">OOP Concepts</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Classes & Objects Deep Dive</li>
+                  <li>• Encapsulation & Data Hiding</li>
+                  <li>• Inheritance & Polymorphism</li>
+                  <li>• Abstraction & Interfaces</li>
+                  <li>• Method Overriding</li>
+                  <li>• Super & This Keywords</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-cyan-300 mb-3">Advanced Projects</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Library Management System</li>
+                  <li>• Employee Management System</li>
+                  <li>• Vehicle Rental System</li>
+                  <li>• Online Shopping Cart</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Week 5-6: Collections Framework */}
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-2xl">📚</span>
+              <h3 className="text-2xl font-semibold text-white">Week 5-6: Collections Framework</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="text-lg font-semibold text-cyan-300 mb-3">Collection Types</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• List Interface (ArrayList, LinkedList)</li>
+                  <li>• Set Interface (HashSet, TreeSet)</li>
+                  <li>• Map Interface (HashMap, TreeMap)</li>
+                  <li>• Queue Interface (PriorityQueue)</li>
+                  <li>• Iterator & ListIterator</li>
+                  <li>• Comparable & Comparator</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-cyan-300 mb-3">Practical Applications</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Contact Management System</li>
+                  <li>• Inventory Management</li>
+                  <li>• Task Scheduler</li>
+                  <li>• Data Analytics Dashboard</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Week 7-8: Exception Handling & I/O */}
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-2xl">⚠️</span>
+              <h3 className="text-2xl font-semibold text-white">Week 7-8: Exception Handling & I/O</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="text-lg font-semibold text-cyan-300 mb-3">Exception Management</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Try-Catch-Finally Blocks</li>
+                  <li>• Checked vs Unchecked Exceptions</li>
+                  <li>• Custom Exception Classes</li>
+                  <li>• Exception Propagation</li>
+                  <li>• Resource Management</li>
+                  <li>• Best Practices</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-cyan-300 mb-3">File I/O Operations</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• File & Directory Operations</li>
+                  <li>• Byte Streams & Character Streams</li>
+                  <li>• Buffered I/O & Performance</li>
+                  <li>• Serialization & Deserialization</li>
+                  <li>• Properties Files & Configuration</li>
+                  <li>• Logging & Debugging</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Week 9-10: Multithreading & Concurrency */}
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-2xl">⚡</span>
+              <h3 className="text-2xl font-semibold text-white">Week 9-10: Multithreading & Concurrency</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="text-lg font-semibold text-cyan-300 mb-3">Threading Concepts</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Thread Creation & Lifecycle</li>
+                  <li>• Thread Synchronization</li>
+                  <li>• Locks & Monitors</li>
+                  <li>• Thread Communication</li>
+                  <li>• Thread Pools & Executors</li>
+                  <li>• Concurrent Collections</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-cyan-300 mb-3">Real-world Applications</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Web Server Implementation</li>
+                  <li>• Background Task Processor</li>
+                  <li>• Real-time Data Processing</li>
+                  <li>• Multi-client Chat Application</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Week 11-12: Advanced Java Features */}
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-2xl">🚀</span>
+              <h3 className="text-2xl font-semibold text-white">Week 11-12: Advanced Java Features</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="text-lg font-semibold text-cyan-300 mb-3">Modern Java Features</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Lambda Expressions</li>
+                  <li>• Stream API & Functional Programming</li>
+                  <li>• Optional Class & Null Safety</li>
+                  <li>• Date/Time API (java.time)</li>
+                  <li>• Annotations & Reflection</li>
+                  <li>• Generics & Type Safety</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-cyan-300 mb-3">Capstone Project</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• E-commerce Platform</li>
+                  <li>• Banking Management System</li>
+                  <li>• Hospital Management System</li>
+                  <li>• Online Learning Platform</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Course Features */}
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          <div className="text-center p-6 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl border border-cyan-500/30">
+            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center">
+              <span className="text-white text-2xl">📖</span>
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-2">Comprehensive Curriculum</h3>
+            <p className="text-gray-300">12 weeks of intensive learning covering all Java fundamentals</p>
+          </div>
+          
+          <div className="text-center p-6 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl border border-purple-500/30">
+            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+              <span className="text-white text-2xl">💻</span>
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-2">Hands-on Projects</h3>
+            <p className="text-gray-300">Build real-world applications with practical coding exercises</p>
+          </div>
+          
+          <div className="text-center p-6 bg-gradient-to-br from-pink-500/20 to-cyan-500/20 rounded-xl border border-pink-500/30">
+            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-full flex items-center justify-center">
+              <span className="text-white text-2xl">🎯</span>
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-2">Industry Ready</h3>
+            <p className="text-gray-300">Skills that directly translate to professional development</p>
+          </div>
+                 </div>
+       </section>
+
+       {/* Class Schedule Calendar Section */}
+       <section className="max-w-6xl mx-auto px-4 py-16">
+         <div className="text-center mb-12">
+           <h2 className="text-4xl font-bold text-white mb-4">Class Schedule & Zoom Links</h2>
+           <p className="text-xl text-gray-300">Join our live classes with recurring zoom meetings</p>
+         </div>
+         
+         <div className="grid gap-6">
+           {/* Java Full Stack Schedule */}
+           <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20">
+             <div className="flex items-center gap-3 mb-6">
+               <span className="text-3xl">☕</span>
+               <div>
+                 <h3 className="text-2xl font-semibold text-white">Java Full Stack Development</h3>
+                 <p className="text-cyan-300">Monday, Wednesday, Friday • 6:00 PM - 8:00 PM EST</p>
+               </div>
+             </div>
+             
+             <div className="grid md:grid-cols-2 gap-6">
+               <div>
+                 <h4 className="text-lg font-semibold text-cyan-300 mb-3">📅 Weekly Schedule</h4>
+                 <div className="space-y-3">
+                   <div className="flex items-center justify-between p-3 bg-slate-700/50 rounded-lg">
+                     <div>
+                       <p className="font-medium text-white">Monday</p>
+                       <p className="text-sm text-gray-400">Theory & Concepts</p>
+                     </div>
+                     <span className="text-cyan-300 text-sm">6:00 PM - 8:00 PM</span>
+                   </div>
+                   <div className="flex items-center justify-between p-3 bg-slate-700/50 rounded-lg">
+                     <div>
+                       <p className="font-medium text-white">Wednesday</p>
+                       <p className="text-sm text-gray-400">Hands-on Coding</p>
+                     </div>
+                     <span className="text-cyan-300 text-sm">6:00 PM - 8:00 PM</span>
+                   </div>
+                   <div className="flex items-center justify-between p-3 bg-slate-700/50 rounded-lg">
+                     <div>
+                       <p className="font-medium text-white">Friday</p>
+                       <p className="text-sm text-gray-400">Project Work & Q&A</p>
+                     </div>
+                     <span className="text-cyan-300 text-sm">6:00 PM - 8:00 PM</span>
+                   </div>
+                 </div>
+               </div>
+               
+               <div>
+                 <h4 className="text-lg font-semibold text-cyan-300 mb-3">🔗 Zoom Meeting Links</h4>
+                 <div className="space-y-3">
+                   <div className="p-3 bg-slate-700/50 rounded-lg">
+                     <p className="font-medium text-white mb-2">Recurring Zoom Meeting</p>
+                     <p className="text-sm text-gray-400 mb-3">Join URL: <span className="text-cyan-300">https://zoom.us/j/1234567890</span></p>
+                     <p className="text-sm text-gray-400 mb-3">Meeting ID: <span className="text-cyan-300">123 456 7890</span></p>
+                     <p className="text-sm text-gray-400 mb-3">Passcode: <span className="text-cyan-300">NextBoolean2024</span></p>
+                     <a 
+                       href="https://zoom.us/j/1234567890" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       className="inline-flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white text-sm rounded-lg transition-colors"
+                     >
+                       🚀 Join Zoom Meeting
+                     </a>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+           {/* React Development Schedule */}
+           <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20">
+             <div className="flex items-center gap-3 mb-6">
+               <span className="text-3xl">⚛️</span>
+               <div>
+                 <h3 className="text-2xl font-semibold text-white">React Web Development</h3>
+                 <p className="text-cyan-300">Tuesday, Thursday • 7:00 PM - 9:00 PM EST</p>
+               </div>
+             </div>
+             
+             <div className="grid md:grid-cols-2 gap-6">
+               <div>
+                 <h4 className="text-lg font-semibold text-cyan-300 mb-3">📅 Weekly Schedule</h4>
+                 <div className="space-y-3">
+                   <div className="flex items-center justify-between p-3 bg-slate-700/50 rounded-lg">
+                     <div>
+                       <p className="font-medium text-white">Tuesday</p>
+                       <p className="text-sm text-gray-400">React Fundamentals</p>
+                     </div>
+                     <span className="text-cyan-300 text-sm">7:00 PM - 9:00 PM</span>
+                   </div>
+                   <div className="flex items-center justify-between p-3 bg-slate-700/50 rounded-lg">
+                     <div>
+                       <p className="font-medium text-white">Thursday</p>
+                       <p className="text-sm text-gray-400">Advanced Concepts & Projects</p>
+                     </div>
+                     <span className="text-cyan-300 text-sm">7:00 PM - 9:00 PM</span>
+                   </div>
+                 </div>
+               </div>
+               
+               <div>
+                 <h4 className="text-lg font-semibold text-cyan-300 mb-3">🔗 Zoom Meeting Links</h4>
+                 <div className="space-y-3">
+                   <div className="p-3 bg-slate-700/50 rounded-lg">
+                     <p className="font-medium text-white mb-2">Recurring Zoom Meeting</p>
+                     <p className="text-sm text-gray-400 mb-3">Join URL: <span className="text-cyan-300">https://zoom.us/j/9876543210</span></p>
+                     <p className="text-sm text-gray-400 mb-3">Meeting ID: <span className="text-cyan-300">987 654 3210</span></p>
+                     <p className="text-sm text-gray-400 mb-3">Passcode: <span className="text-cyan-300">React2024</span></p>
+                     <a 
+                       href="https://zoom.us/j/9876543210" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       className="inline-flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white text-sm rounded-lg transition-colors"
+                     >
+                       🚀 Join Zoom Meeting
+                     </a>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+           {/* AWS Cloud Schedule */}
+           <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20">
+             <div className="flex items-center gap-3 mb-6">
+               <span className="text-3xl">☁️</span>
+               <div>
+                 <h3 className="text-2xl font-semibold text-white">AWS Cloud Solutions</h3>
+                 <p className="text-cyan-300">Saturday • 10:00 AM - 2:00 PM EST</p>
+               </div>
+             </div>
+             
+             <div className="grid md:grid-cols-2 gap-6">
+               <div>
+                 <h4 className="text-lg font-semibold text-cyan-300 mb-3">📅 Weekly Schedule</h4>
+                 <div className="space-y-3">
+                   <div className="flex items-center justify-between p-3 bg-slate-700/50 rounded-lg">
+                     <div>
+                       <p className="font-medium text-white">Saturday</p>
+                       <p className="text-sm text-gray-400">Intensive Cloud Training</p>
+                     </div>
+                     <span className="text-cyan-300 text-sm">10:00 AM - 2:00 PM</span>
+                   </div>
+                 </div>
+               </div>
+               
+               <div>
+                 <h4 className="text-lg font-semibold text-cyan-300 mb-3">🔗 Zoom Meeting Links</h4>
+                 <div className="space-y-3">
+                   <div className="p-3 bg-slate-700/50 rounded-lg">
+                     <p className="font-medium text-white mb-2">Recurring Zoom Meeting</p>
+                     <p className="text-sm text-gray-400 mb-3">Join URL: <span className="text-cyan-300">https://zoom.us/j/5556667777</span></p>
+                     <p className="text-sm text-gray-400 mb-3">Meeting ID: <span className="text-cyan-300">555 666 7777</span></p>
+                     <p className="text-sm text-gray-400 mb-3">Passcode: <span className="text-cyan-300">AWS2024</span></p>
+                     <a 
+                       href="https://zoom.us/j/5556667777" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       className="inline-flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white text-sm rounded-lg transition-colors"
+                     >
+                       🚀 Join Zoom Meeting
+                     </a>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+
+         {/* Calendar Features */}
+         <div className="mt-12 grid md:grid-cols-3 gap-6">
+           <div className="text-center p-6 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl border border-cyan-500/30">
+             <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center">
+               <span className="text-white text-2xl">📅</span>
+             </div>
+             <h3 className="text-xl font-semibold text-white mb-2">Recurring Schedule</h3>
+             <p className="text-gray-300">Consistent class times with recurring zoom meetings</p>
+           </div>
+           
+           <div className="text-center p-6 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl border border-purple-500/30">
+             <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+               <span className="text-white text-2xl">🔗</span>
+             </div>
+             <h3 className="text-xl font-semibold text-white mb-2">Easy Access</h3>
+             <p className="text-gray-300">One-click zoom links for seamless class joining</p>
+           </div>
+           
+           <div className="text-center p-6 bg-gradient-to-br from-pink-500/20 to-cyan-500/20 rounded-xl border border-pink-500/30">
+             <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-full flex items-center justify-center">
+               <span className="text-white text-2xl">⏰</span>
+             </div>
+             <h3 className="text-xl font-semibold text-white mb-2">Flexible Timing</h3>
+             <p className="text-gray-300">Multiple time slots to fit your schedule</p>
+           </div>
+         </div>
+       </section>
+
+       {/* Placements */}
       <section id="placements" className="max-w-6xl mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold mb-6">Placements</h2>
         <div className="grid md:grid-cols-3 gap-6">
