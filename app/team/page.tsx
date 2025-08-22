@@ -111,7 +111,7 @@ export default function TeamPage() {
             </div>
           </a>
           <nav className="hidden md:flex gap-4 text-sm">
-            <a href="/" className="hover:text-emerald-300 transition-colors">← Back to Home</a>
+            <a href="/" className="hover:text-cyan-300 transition-colors">← Back to Home</a>
           </nav>
         </div>
       </header>
@@ -119,22 +119,22 @@ export default function TeamPage() {
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto px-4 py-16 text-center">
         <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
-          Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Team</span>
+                      Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">Team</span>
         </h1>
         <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
           We're a passionate team of educators, developers, and innovators dedicated to revolutionizing tech education. 
           Every member brings unique expertise to help students succeed in their tech journey.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <div className="bg-emerald-500/20 border border-emerald-500/30 rounded-xl px-6 py-3">
-            <span className="text-emerald-300 font-semibold">🎓 Expert Educators</span>
-          </div>
-          <div className="bg-emerald-500/20 border border-emerald-500/30 rounded-xl px-6 py-3">
-            <span className="text-emerald-300 font-semibold">💻 Tech Innovators</span>
-          </div>
-          <div className="bg-emerald-500/20 border border-emerald-500/30 rounded-xl px-6 py-3">
-            <span className="text-emerald-300 font-semibold">🚀 Growth Mindset</span>
-          </div>
+                      <div className="bg-cyan-500/20 border border-cyan-500/30 rounded-xl px-6 py-3">
+              <span className="text-cyan-300 font-semibold">🎓 Expert Educators</span>
+            </div>
+            <div className="bg-cyan-500/20 border border-cyan-500/30 rounded-xl px-6 py-3">
+              <span className="text-cyan-300 font-semibold">💻 Tech Innovators</span>
+            </div>
+            <div className="bg-cyan-500/20 border border-cyan-500/30 rounded-xl px-6 py-3">
+              <span className="text-cyan-300 font-semibold">🚀 Growth Mindset</span>
+            </div>
         </div>
       </section>
 
@@ -143,7 +143,7 @@ export default function TeamPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {companyStats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-emerald-400 mb-2">{stat.number}</div>
+                              <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">{stat.number}</div>
               <div className="text-sm opacity-80">{stat.label}</div>
             </div>
           ))}
@@ -157,11 +157,11 @@ export default function TeamPage() {
           {teamMembers.map((member, index) => (
             <div 
               key={index} 
-              className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-emerald-500/20 hover:border-emerald-400/40 transition-all duration-300 cursor-pointer group"
+              className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 cursor-pointer group"
               onClick={() => setSelectedMember(selectedMember === index ? null : index)}
             >
               <div className="text-center mb-4">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-emerald-500/30 group-hover:border-emerald-400/50 transition-all duration-300">
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-cyan-500/30 group-hover:border-cyan-400/50 transition-all duration-300">
                   <img 
                     src={member.image} 
                     alt={member.name}
@@ -169,28 +169,28 @@ export default function TeamPage() {
                   />
                 </div>
                 <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                <p className="text-emerald-400 font-medium text-sm">{member.role}</p>
+                <p className="text-cyan-400 font-medium text-sm">{member.role}</p>
               </div>
               
               <p className="text-sm opacity-80 mb-4 text-center">{member.description}</p>
               
               {selectedMember === index && (
-                <div className="mt-4 pt-4 border-t border-emerald-500/20">
-                  <h4 className="font-semibold text-emerald-300 mb-3 text-sm">Expertise</h4>
+                <div className="mt-4 pt-4 border-t border-cyan-500/20">
+                  <h4 className="font-semibold text-cyan-300 mb-3 text-sm">Expertise</h4>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {member.expertise.map((skill, idx) => (
-                      <span key={idx} className="px-2 py-1 bg-emerald-500/20 text-emerald-300 text-xs rounded-lg">
+                      <span key={idx} className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-lg">
                         {skill}
                       </span>
                     ))}
                   </div>
                   <div className="flex gap-3 justify-center">
-                    <a href={member.linkedin} className="text-emerald-400 hover:text-emerald-300 transition-colors">
+                    <a href={member.linkedin} className="text-cyan-400 hover:text-cyan-300 transition-colors">
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.856-3.047-1.856 0-2.136 1.445-2.136 2.939v5.677H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                       </svg>
                     </a>
-                    <a href={member.github} className="text-emerald-400 hover:text-emerald-300 transition-colors">
+                    <a href={member.github} className="text-cyan-400 hover:text-cyan-300 transition-colors">
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                       </svg>
@@ -201,7 +201,7 @@ export default function TeamPage() {
               
               <div className="text-center mt-4">
                 <button 
-                  className="text-emerald-400 hover:text-emerald-300 text-sm transition-colors"
+                  className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors"
                   onClick={(e) => {
                     e.stopPropagation();
                     setSelectedMember(selectedMember === index ? null : index);
@@ -219,32 +219,32 @@ export default function TeamPage() {
       <section className="max-w-6xl mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold mb-8 text-center">Our Culture & Values</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-emerald-500/20 text-center">
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-500/20 text-center">
             <div className="text-4xl mb-4">🎯</div>
             <h3 className="text-xl font-semibold mb-3">Mission-Driven</h3>
             <p className="text-sm opacity-80">Every decision we make is guided by our mission to democratize quality tech education.</p>
           </div>
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-emerald-500/20 text-center">
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-500/20 text-center">
             <div className="text-4xl mb-4">🤝</div>
             <h3 className="text-xl font-semibold mb-3">Collaborative</h3>
             <p className="text-sm opacity-80">We believe in the power of teamwork and diverse perspectives to solve complex challenges.</p>
           </div>
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-emerald-500/20 text-center">
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-500/20 text-center">
             <div className="text-4xl mb-4">🚀</div>
             <h3 className="text-xl font-semibold mb-3">Innovative</h3>
             <p className="text-sm opacity-80">Constantly pushing boundaries to create cutting-edge educational experiences.</p>
           </div>
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-emerald-500/20 text-center">
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-500/20 text-center">
             <div className="text-4xl mb-4">💡</div>
             <h3 className="text-xl font-semibold mb-3">Student-First</h3>
             <p className="text-sm opacity-80">Every feature and decision is made with our students' success in mind.</p>
           </div>
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-emerald-500/20 text-center">
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-500/20 text-center">
             <div className="text-4xl mb-4">🌱</div>
             <h3 className="text-xl font-semibold mb-3">Growth Mindset</h3>
             <p className="text-sm opacity-80">We embrace challenges and see failures as opportunities to learn and improve.</p>
           </div>
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-emerald-500/20 text-center">
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-500/20 text-center">
             <div className="text-4xl mb-4">🌍</div>
             <h3 className="text-xl font-semibold mb-3">Global Impact</h3>
             <p className="text-sm opacity-80">Committed to making tech education accessible to learners worldwide.</p>
@@ -254,16 +254,16 @@ export default function TeamPage() {
 
       {/* Join Our Team CTA */}
       <section className="max-w-6xl mx-auto px-4 py-12">
-        <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl p-8 border border-emerald-500/30 text-center">
+        <div className="bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-cyan-500/30 text-center">
           <h2 className="text-3xl font-bold mb-4">Want to Join Our Team?</h2>
           <p className="text-lg opacity-90 mb-6">
             We're always looking for passionate individuals who share our vision for the future of education.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="/careers" className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-medium rounded-xl transition-all duration-200">
+            <a href="/careers" className="px-6 py-3 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-xl transition-all duration-200">
               View Open Positions
             </a>
-            <a href="#contact" className="px-6 py-3 border border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/10 rounded-xl transition-all duration-200">
+            <a href="#contact" className="px-6 py-3 border border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/10 rounded-xl transition-all duration-200">
               Contact Us
             </a>
           </div>
@@ -277,10 +277,10 @@ export default function TeamPage() {
             Our team is the heart of Next Boolean. Together, we're building the future of tech education.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="/" className="px-6 py-3 border border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/10 rounded-xl transition-all duration-200">
+            <a href="/" className="px-6 py-3 border border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/10 rounded-xl transition-all duration-200">
               ← Back to Home
             </a>
-            <a href="/careers" className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white rounded-xl transition-all duration-200">
+            <a href="/careers" className="px-6 py-3 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 text-white rounded-xl transition-all duration-200">
               Join Our Team
             </a>
           </div>

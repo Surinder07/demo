@@ -113,10 +113,11 @@ export default function Page() {
             <a href="#pricing" className="hover:text-cyan-300 transition-colors">Pricing</a>
             <a href="#team" className="hover:text-cyan-300 transition-colors">Team</a>
             <a href="#careers" className="hover:text-cyan-300 transition-colors">Careers</a>
+            <a href="/lms" className="hover:text-cyan-300 transition-colors">LMS Portal</a>
           </nav>
           <button 
             onClick={() => setEnrollFormOpen(true)}
-            className="ml-4 px-4 py-2 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold text-sm shadow-lg hover:shadow-xl transition-all duration-200"
+            className="ml-4 px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 text-white font-semibold text-sm shadow-lg hover:shadow-xl transition-all duration-200"
           >
             Enroll Now
           </button>
@@ -209,7 +210,7 @@ export default function Page() {
       {/* Features */}
       <section className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-6 py-8">
         {features.map(f => (
-          <div key={f.title} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-emerald-500/20 hover:border-emerald-400/40 transition-all duration-300 hover:shadow-emerald-500/10">
+          <div key={f.title} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-cyan-500/10">
             <h3 className="font-semibold text-xl">{f.title}</h3>
             <p className="opacity-85 mt-2">{f.desc}</p>
           </div>
@@ -221,7 +222,7 @@ export default function Page() {
         <h2 className="text-3xl font-bold mb-6">Courses</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {courses.map(c => (
-            <div key={c.title} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-emerald-500/20 hover:border-emerald-400/40 transition-all duration-300 hover:shadow-emerald-500/10">
+            <div key={c.title} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-cyan-500/10">
               <div className="flex items-center justify-between">
                 <h3 className="text-xl font-semibold">{c.title}</h3>
                 <span className="text-xs opacity-70">{c.meta}</span>
@@ -230,8 +231,8 @@ export default function Page() {
                 {c.list.map(i => <li key={i}>{i}</li>)}
               </ul>
               <div className="mt-4 flex gap-2">
-                <a href="#admissions" className="px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white text-sm font-medium transition-all duration-200">Enroll</a>
-                <a href="#demos" className="px-4 py-2 rounded-xl border border-emerald-500/30 hover:bg-emerald-500/10 text-emerald-300 text-sm transition-all duration-200">Demo</a>
+                <a href="#admissions" className="px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 text-white text-sm font-medium transition-all duration-200">Enroll</a>
+                <a href="#demos" className="px-4 py-2 rounded-xl border border-cyan-500/30 hover:bg-cyan-500/10 text-cyan-300 text-sm transition-all duration-200">Demo</a>
               </div>
             </div>
           ))}
@@ -243,8 +244,8 @@ export default function Page() {
         <h2 className="text-3xl font-bold mb-6">Placements</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[["95%", "Placement Rate"], ["60d", "Median Time to Offer"], ["120+", "Hiring Partners"]].map(([k, v]) => (
-            <div key={k} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-emerald-500/20 text-center hover:border-emerald-400/40 transition-all duration-300 hover:shadow-emerald-500/10">
-              <div className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">{k}</div>
+            <div key={k} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300 hover:shadow-cyan-500/10">
+              <div className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">{k}</div>
               <div className="opacity-80">{v}</div>
             </div>
           ))}
@@ -256,13 +257,13 @@ export default function Page() {
         <h2 className="text-3xl font-bold mb-6">Pricing</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {tiers.map(t => (
-            <div key={t.name} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-emerald-500/20 hover:border-emerald-400/40 transition-all duration-300 hover:shadow-emerald-500/10">
+            <div key={t.name} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-cyan-500/10">
               <div className="text-2xl font-bold">{t.name}</div>
               <div className="text-3xl font-extrabold mt-2">{t.price}</div>
               <ul className="mt-3 space-y-1 list-disc list-inside opacity-95">
                 {t.features.map(f => <li key={f}>{f}</li>)}
               </ul>
-              <a href="#admissions" className="inline-block mt-4 px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white text-sm font-medium transition-all duration-200">Choose</a>
+              <a href="#admissions" className="inline-block mt-4 px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 text-white text-sm font-medium transition-all duration-200">Choose</a>
             </div>
           ))}
         </div>
@@ -273,8 +274,8 @@ export default function Page() {
         <h2 className="text-3xl font-bold mb-6">FAQ</h2>
         <div className="space-y-3">
           {[["Are classes recorded?", "Yes, every live class is recorded and shared the same day."], ["Do you offer job assistance?", "Yes — resume reviews, mock interviews, and referrals."], ["Do you provide certificates?", "Yes, a certificate is issued on course completion."]].map(([q, a]) => (
-            <details key={q} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-emerald-500/20 hover:border-emerald-400/40 transition-all duration-300">
-              <summary className="cursor-pointer font-semibold hover:text-emerald-300 transition-colors">{q}</summary>
+            <details key={q} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+              <summary className="cursor-pointer font-semibold hover:text-cyan-300 transition-colors">{q}</summary>
               <p className="mt-2 opacity-90">{a}</p>
             </details>
           ))}
@@ -284,7 +285,7 @@ export default function Page() {
       {/* Admissions */}
       <section id="admissions" className="max-w-6xl mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold mb-6">Admissions</h2>
-        <ol className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-emerald-500/20 list-decimal list-inside space-y-2">
+        <ol className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20 list-decimal list-inside space-y-2">
           <li>Submit application form</li>
           <li>Attend counseling call</li>
           <li>Enroll & reserve seat</li>
@@ -300,16 +301,21 @@ export default function Page() {
             {
               title: "Java Full Stack Intro",
               image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=450&fit=crop&crop=center",
-              alt: "Java programming code with Spring Boot framework"
+              alt: "Java programming code with Spring Boot framework",
+              logo: "☕"
             },
             {
               title: "React Basics",
               image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=450&fit=crop&crop=center",
-              alt: "React component structure and modern web development"
+              alt: "React component structure and modern web development",
+              logo: "⚛️"
             }
           ].map((demo, index) => (
             <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-cyan-500/10">
-              <h3 className="text-xl font-semibold mb-3">{demo.title}</h3>
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-4xl">{demo.logo}</span>
+                <h3 className="text-xl font-semibold">{demo.title}</h3>
+              </div>
               <div className="aspect-video w-full rounded-xl overflow-hidden">
                 <img 
                   src={demo.image} 
@@ -331,7 +337,7 @@ export default function Page() {
       {/* Team */}
       <section id="team" className="max-w-6xl mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold mb-6">Our Team</h2>
-        <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-8 border border-emerald-500/20 text-center">
+        <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-8 border border-cyan-500/20 text-center">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">Meet Our Amazing Team</h3>
             <p className="text-lg opacity-90 mb-6">
@@ -366,7 +372,7 @@ export default function Page() {
       {/* Careers */}
       <section id="careers" className="max-w-6xl mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold mb-6">Careers</h2>
-        <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-8 border border-emerald-500/20 text-center">
+        <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-8 border border-cyan-500/20 text-center">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">Join Our Team</h3>
             <p className="text-lg opacity-90 mb-6">
@@ -379,7 +385,7 @@ export default function Page() {
                 <span>Growing company with exciting opportunities</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-emerald-400 text-xl">🌍</span>
+                <span className="text-cyan-400 text-xl">🌍</span>
                 <span>Remote-first culture with flexible hours</span>
               </div>
               <div className="flex items-center gap-3">
@@ -420,16 +426,16 @@ export default function Page() {
 
         {/* Chat Window */}
         {chatOpen && (
-          <div className="absolute top-16 right-0 w-80 bg-slate-800 border border-emerald-500/20 rounded-xl shadow-2xl">
+          <div className="absolute top-16 right-0 w-80 bg-slate-800 border border-cyan-500/20 rounded-xl shadow-2xl">
             {/* Chat Header */}
-            <div className="bg-gradient-to-r from-emerald-500 to-teal-500 rounded-t-xl p-4">
+            <div className="bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-t-xl p-4">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
                   <span className="text-white text-lg">🤖</span>
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">NextBoolean AI</h3>
-                  <p className="text-emerald-100 text-sm">Ask me anything about our courses!</p>
+                  <p className="text-cyan-100 text-sm">Ask me anything about our courses!</p>
                 </div>
               </div>
             </div>
@@ -438,8 +444,8 @@ export default function Page() {
             <div className="h-80 overflow-y-auto p-4 space-y-3">
               {/* Welcome Message */}
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-emerald-400 text-sm">🤖</span>
+                <div className="w-8 h-8 bg-cyan-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-cyan-400 text-sm">🤖</span>
                 </div>
                 <div className="bg-slate-700 rounded-lg p-3 max-w-[80%]">
                   <p className="text-sm text-gray-200">
@@ -452,24 +458,24 @@ export default function Page() {
                     <li>• Career opportunities</li>
                     <li>• Technical questions</li>
                   </ul>
-                  <p className="text-xs text-emerald-400 mt-2">How can I assist you today?</p>
+                  <p className="text-xs text-cyan-400 mt-2">How can I assist you today?</p>
                 </div>
               </div>
 
               {/* Sample User Message */}
               <div className="flex items-start gap-3 justify-end">
-                <div className="bg-emerald-500 rounded-lg p-3 max-w-[80%]">
+                <div className="bg-cyan-500 rounded-lg p-3 max-w-[80%]">
                   <p className="text-sm text-white">Tell me about your Java course</p>
                 </div>
-                <div className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-sm">👤</span>
                 </div>
               </div>
 
               {/* Sample AI Response */}
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-emerald-400 text-sm">🤖</span>
+                <div className="w-8 h-8 bg-cyan-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-cyan-400 text-sm">🤖</span>
                 </div>
                 <div className="bg-slate-700 rounded-lg p-3 max-w-[80%]">
                   <p className="text-sm text-gray-200">
@@ -481,7 +487,7 @@ export default function Page() {
                     <li>• Docker & CI/CD</li>
                     <li>• Mock interviews & placement support</li>
                   </ul>
-                  <p className="text-xs text-emerald-400 mt-2">Would you like to know more about pricing or enrollment?</p>
+                  <p className="text-xs text-cyan-400 mt-2">Would you like to know more about pricing or enrollment?</p>
                 </div>
               </div>
             </div>
@@ -506,7 +512,7 @@ export default function Page() {
       {/* Enrollment Form Modal */}
       {enrollFormOpen && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className="bg-slate-800 border border-emerald-500/30 rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-slate-800 border border-cyan-500/30 rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-2xl font-bold">Enroll Now - Get Started Today!</h3>
               <button
@@ -520,47 +526,47 @@ export default function Page() {
             </div>
 
             {/* Contact Information */}
-            <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl p-6 mb-6 border border-emerald-500/30">
-              <h4 className="text-lg font-semibold mb-4 text-emerald-300">📞 Contact Us Directly</h4>
+            <div className="bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-xl p-6 mb-6 border border-cyan-500/30">
+              <h4 className="text-lg font-semibold mb-4 text-cyan-300">📞 Contact Us Directly</h4>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-emerald-500/20 rounded-full flex items-center justify-center">
-                    <span className="text-emerald-400 text-lg">📱</span>
+                  <div className="w-10 h-10 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                    <span className="text-cyan-400 text-lg">📱</span>
                   </div>
                   <div>
                     <p className="font-medium text-white">Call Us</p>
-                    <a href="tel:+14374638537" className="text-emerald-300 hover:text-emerald-200 transition-colors">
+                    <a href="tel:+14374638537" className="text-cyan-300 hover:text-cyan-200 transition-colors">
                       +1 (437) 463-8537
                     </a>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-emerald-500/20 rounded-full flex items-center justify-center">
-                    <span className="text-emerald-400 text-lg">📧</span>
+                  <div className="w-10 h-10 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                    <span className="text-cyan-400 text-lg">📧</span>
                   </div>
                   <div>
                     <p className="font-medium text-white">Email Us</p>
-                    <a href="mailto:info@nextboolean.com" className="text-emerald-300 hover:text-emerald-200 transition-colors">
+                    <a href="mailto:info@nextboolean.com" className="text-cyan-300 hover:text-cyan-200 transition-colors">
                       info@nextboolean.com
                     </a>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-emerald-500/20 rounded-full flex items-center justify-center">
-                    <span className="text-emerald-400 text-lg">📍</span>
+                  <div className="w-10 h-10 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                    <span className="text-cyan-400 text-lg">📍</span>
                   </div>
                   <div>
                     <p className="font-medium text-white">Location</p>
-                    <p className="text-emerald-300">Mississauga, ON, Canada</p>
+                    <p className="text-cyan-300">Mississauga, ON, Canada</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-emerald-500/20 rounded-full flex items-center justify-center">
-                    <span className="text-emerald-400 text-lg">⏰</span>
+                  <div className="w-10 h-10 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                    <span className="text-cyan-400 text-lg">⏰</span>
                   </div>
                   <div>
                     <p className="font-medium text-white">Hours</p>
-                    <p className="text-emerald-300">Mon-Fri: 9AM-6PM EST</p>
+                    <p className="text-cyan-300">Mon-Fri: 9AM-6PM EST</p>
                   </div>
                 </div>
               </div>
@@ -575,7 +581,7 @@ export default function Page() {
                   value={formData.firstName}
                   onChange={handleInputChange}
                   placeholder="First Name"
-                  className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:border-emerald-500 focus:outline-none transition-colors"
+                  className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
                   required
                 />
                 <input
@@ -584,7 +590,7 @@ export default function Page() {
                   value={formData.lastName}
                   onChange={handleInputChange}
                   placeholder="Last Name"
-                  className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:border-emerald-500 focus:outline-none transition-colors"
+                  className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
                   required
                 />
               </div>
@@ -596,7 +602,7 @@ export default function Page() {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="Email"
-                  className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:border-emerald-500 focus:outline-none transition-colors"
+                  className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
                   required
                 />
                 <input
@@ -605,7 +611,7 @@ export default function Page() {
                   value={formData.phone}
                   onChange={handleInputChange}
                   placeholder="Phone Number"
-                  className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:border-emerald-500 focus:outline-none transition-colors"
+                  className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
                   required
                 />
               </div>
@@ -614,7 +620,7 @@ export default function Page() {
                 name="course"
                 value={formData.course}
                 onChange={handleInputChange}
-                className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:border-emerald-500 focus:outline-none transition-colors w-full"
+                className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors w-full"
                 required
               >
                 <option value="">Select a Course</option>
@@ -631,7 +637,7 @@ export default function Page() {
                 onChange={handleInputChange}
                 placeholder="Tell us about your goals and any questions you have..."
                 rows={4}
-                className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:border-emerald-500 focus:outline-none transition-colors w-full"
+                className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors w-full"
                 required
               ></textarea>
               
@@ -639,14 +645,14 @@ export default function Page() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex-1 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-medium rounded-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Enrollment Request'}
                 </button>
                 <button
                   type="button"
                   onClick={() => setEnrollFormOpen(false)}
-                  className="px-6 py-3 border border-slate-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300 rounded-xl transition-all duration-200"
+                  className="px-6 py-3 border border-slate-600 text-gray-300 hover:border-cyan-500 hover:text-cyan-300 rounded-xl transition-all duration-200"
                 >
                   Cancel
                 </button>
@@ -727,15 +733,15 @@ export default function Page() {
               <li><a href="/contact" className="hover:text-cyan-300 transition-colors">Contact</a></li>
             </ul>
           </div>
-          <div>
-            <h4 className="font-semibold mb-2">Learning Platform</h4>
-            <ul className="space-y-1 opacity-90 text-sm">
-              <li><a href="https://www.codeqube.io" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">LMS Portal</a></li>
-              <li><a href="https://www.codeqube.io" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">Student Dashboard</a></li>
-              <li><a href="https://www.codeqube.io" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">Course Materials</a></li>
-              <li><a href="https://www.codeqube.io" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">Progress Tracking</a></li>
-            </ul>
-          </div>
+                      <div>
+              <h4 className="font-semibold mb-2">Learning Platform</h4>
+              <ul className="space-y-1 opacity-90 text-sm">
+                <li><a href="https://lms.nextboolean.com" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">LMS Portal</a></li>
+                <li><a href="https://lms.nextboolean.com" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">Student Dashboard</a></li>
+                <li><a href="https://lms.nextboolean.com" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">Course Materials</a></li>
+                <li><a href="https://lms.nextboolean.com" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">Progress Tracking</a></li>
+              </ul>
+            </div>
           <div>
             <h4 className="font-semibold mb-2">Get in touch</h4>
             <p className="opacity-90">Mississauga, ON • +1 437-463-8537</p>
